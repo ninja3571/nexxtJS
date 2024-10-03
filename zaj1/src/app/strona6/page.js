@@ -18,7 +18,6 @@ export default function Page(){
             <input value={input} onChange={(e)=>setInput(e.target.value)} placeholder="lista"></input>
             <button onClick={zmien}>DODAJ</button>
             <ul>
-                <li>{items}</li>
                 {
                     items.map((item, idx)=>(
                         <li key={idx}>{item}</li>
