@@ -1,7 +1,19 @@
+'use client'
+
+import { useState } from "react"
+
 export default function Home(){
+
+    const [licz, setLicz] = useState('start')
+
+    const zmien = ()=>{
+        setLicz(licz == 'start'? "stop" : "start")
+
+    }
     return(
-        <div>
-            <h1>strona2</h1>
-        </div>
+        <>
+            <h1>{licz}</h1>
+            <button onClick={zmien}>zmien</button>
+        </>
     )
 }

@@ -1,6 +1,5 @@
 // import Image from "next/image";
 import ImieList from "@/components/imieList";
-import Menu from "@/components/many";
 import Lista from "@/components/punktLista";
 
 export default function Home() {
@@ -18,10 +17,8 @@ export default function Home() {
       ))
     }
 
-    {/* <Lista cos="Lorem ipsum" bckCol="purple"/>   */}
-    {/* <Lista lista={lista2}/> */}
-
-    <Menu/>
+    {/* {<Lista item="Lorem ipsum" bckCol="purple"/>} */}
+    {<Lista lista={lista2}/> }
     </div>
   );
 }

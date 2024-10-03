@@ -11,9 +11,9 @@ export default function Lista({lista}){
     return(
         <ul>
             {
-                lista.map((item, index)=>(
-                    <li key={index}>{item}</li>
-                ))
+              lista.map((osoba, index)=>(
+                <li key={index}>{osoba.item}</li>
+              ))
             }
         </ul>
     )
