@@ -5,9 +5,7 @@ export default function Countries(kraj){
         <div className="bg-indigo-500 w-[200px] h-[150px]">
             <Image
             src={kraj.flags.png}
-            alt={kraj.name.common}
-            width={150}
-            height={50}>
+            alt={kraj.name.common}>
             </Image>
 
             <div className="fles font-bold justify-center">
