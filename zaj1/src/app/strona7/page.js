@@ -27,8 +27,7 @@ export default function Page(){
 
 
     return(
-        <div>
-            <h1>działa</h1>
+        <div className='w-full h-screen flex flex-row flex-wrap'>
             
             {kraje && kraje.map((item, idx)=>(
                     <Countries key={idx} kraj={item}></Countries>
