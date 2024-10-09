@@ -39,7 +39,8 @@ export default function Info({params}){
                 <div className='font-bold flex justify-center'>
                     <h1>{kraj[0].name.common}</h1>
                 </div>
-                    <h1>{kraj[0].capital}</h1>
+                    <h1>STOLICA: {kraj[0].capital}</h1>
+                    <h1>SHORT: {kraj[0].cca2}</h1>
             </div>}
 
         </div>
