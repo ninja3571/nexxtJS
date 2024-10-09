@@ -2,6 +2,7 @@
 
 import Countries from "@/components/country"
 import {useState, useEffect} from "react"
+import Link from "next/link"
 
 export default function Page(){
 
@@ -30,7 +31,9 @@ export default function Page(){
         <div className='w-full h-screen flex flex-row flex-wrap'>
             
             {kraje && kraje.map((item, idx)=>(
-                    <Countries key={idx} kraj={item}></Countries>
+                <Link key={idx} href={`/strona7/${item.cca2}`}>
+                    <Countries kraj={item}></Countries>
+                </Link>
                 ))
             }
         </div>

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Countries({kraj}){
     return(
-        <div className="bg-indigo-500 w-[200px] h-[200px] border p-[3px]">
+        <div className="w-[200px] h-[200px] border p-[3px] bg-gradient-to-b from-indigo-600 to-emerald-400">
             <div className='relative w-[190px] h-[100px]'>
 
                 <Image
@@ -21,6 +21,7 @@ export default function Countries({kraj}){
             <ul>
                 <li>{kraj.capital}</li>
                 <li>{kraj.population}</li>
+                <li>{kraj.cca2}</li>
             </ul>
         </div>
     )
