@@ -10,7 +10,8 @@ export default function Countries({kraj}){
                     alt={kraj.name.common}
                     fill={true}
                     // layout='fill'
-                    objectfit='container'>
+                    objectfit='container'
+                    priority>
                 </Image>
             </div>
 
