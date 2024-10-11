@@ -15,11 +15,10 @@ export default function Info({ params }) {
                 const response = await fetch(`https://restcountries.com/v3.1/alpha/${params.kod}`)
                 const json = await response.json()
                 setKraj(json)
-                // console.log(json)
+                console.log(json)
             } catch (error) {
                 console.log("ERROR")
             } finally {
-                setLoad(false)
             }
         }
         getData()
@@ -45,7 +44,7 @@ export default function Info({ params }) {
                     <div className='font-bold flex justify-center mt-[20px]'>
                         <h1>Sąsiedzi:</h1>
                     </div>
-                    <div className="flex flex-row flex-wrap justify-center items-center gap-[3px]">
+                    <div className="flex flex-row flex-wrap justify-center items-center gap-[3px] overflow-scroll h-[340px]">
 
                         {kraj[0].borders && kraj[0].borders.map((items, idx) => (
                             <Borders key={idx} data={items}></Borders>

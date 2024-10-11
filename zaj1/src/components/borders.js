@@ -5,6 +5,7 @@ import Link from "next/link";
 export default function Borders({ data }) {
 
     const [kraj, setKraj] = useState([])
+    const [load, setLoad] = useState(true)
 
     useEffect(() => {
         const getData = async () => {
@@ -18,6 +19,7 @@ export default function Borders({ data }) {
                 console.log(error)
             } finally {
                 console.log(kraj)
+                setLoad(false)
             }
         }
 
@@ -25,20 +27,20 @@ export default function Borders({ data }) {
     }, [])
 
     return (
-        <div>{kraj &&
+        <div>{load == false &&
             // sprawdz czy jest 
 
             <Link href={`/strona7/${kraj.cca2}`}>
                 <div className="border-black border-2 w-[140px] h-[120px] flex flex-col items-center bg-gradient-to-bl from-lime-300 to-indigo-400 pt-[5px] ">
                     <div className='w-[100px] h-[70px] relative'>
-                        {/* <Image
-                        src={kraj.flags.png}
-                        alt={kraj.name.common}
-                        fill={true}>
-                        </Image> */}
+                        <Image
+                            src={kraj[0].flags.png}
+                            alt={kraj[0].name.common}
+                            fill={true}>
+                        </Image>
                     </div>
-                    {/* <h1>{kraj.name.common}</h1> */}
-                    <h1>{kraj.capital}</h1>
+                    <h1>{kraj[0].name.common}</h1>
+                    <h1>{kraj[0].capital}</h1>
                 </div>
             </Link>
         }
