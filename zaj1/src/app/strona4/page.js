@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export default function Pade(){
+export default function Page() {
     // const [text, setText] = useState('')
 
     // const zmien = ()=>{
@@ -21,15 +21,15 @@ export default function Pade(){
     const [text, setText] = useState('')
     const [input, setInput] = useState('')
 
-    const zmien = ()=>{
+    const zmien = () => {
         setText(input)
         setInput('')
     }
 
-    return(
+    return (
         <div>
             <h1>{text}</h1>
-            <input value={input} onChange={(e)=> setInput(e.target.value)}></input>
+            <input value={input} onChange={(e) => setInput(e.target.value)}></input>
             <button onClick={zmien}>zmien</button>
         </div>
     )
